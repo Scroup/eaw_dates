@@ -1,77 +1,87 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 30, in script
-    menu:
-  File "game/screens.rpy", line 207, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 207, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 210, in execute
-    vbox:
-  File "game/screens.rpy", line 211, in execute
-    for i in items:
-  File "game/screens.rpy", line 212, in execute
-    textbutton i.caption action i.action
-NameError: Name 'TBD' is not defined.
+  File "game/script.rpy", line 21, in script
+    you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+Exception: Could not find font u'Sitka.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 30, in script
-    menu:
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 1504, in execute
-    choice = renpy.exports.menu(choices, self.set)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 870, in menu
-    rv = renpy.store.menu(items)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1056, in display_menu
-    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\main.py", line 520, in main
+    run(restart)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\main.py", line 149, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\execution.py", line 835, in run_context
+    context.run()
+  File "game/script.rpy", line 21, in script
+    you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 609, in execute
+    statement_name("say")
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 43, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1408, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2186, in do_with
+    clear=clear)
   File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2620, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
-    d.visit_all(callback)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 401, in visit_all
-    callback(self)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 411, in per_interact
-    self.update()
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 592, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 207, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 207, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 210, in execute
-    vbox:
-  File "game/screens.rpy", line 211, in execute
-    for i in items:
-  File "game/screens.rpy", line 212, in execute
-    textbutton i.caption action i.action
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ui.py", line 967, in _textbutton
-    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1366, in __init__
-    self.set_text(text, scope, substitute)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1466, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\substitutions.py", line 242, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\substitutions.py", line 201, in __getitem__
-    raise NameError("Name '{}' is not defined.".format(key))
-NameError: Name 'TBD' is not defined.
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 3022, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2034, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 475, in renpy.display.render.render_screen
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\transition.py", line 361, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 639, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 1110, in render
+    st, at)
+  File "render.pyx", line 143, in renpy.display.render.render
+  File "render.pyx", line 231, in renpy.display.render.render
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1807, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 590, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 238, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\font.py", line 650, in get_font
+    face = load_face(fn)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\font.py", line 591, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font u'Sitka.ttf'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3135
-eaw_dates 1.0
+Equestria at War: Dev Dates 0.0.1
