@@ -1,0 +1,77 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 30, in script
+    menu:
+  File "game/screens.rpy", line 207, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 207, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 210, in execute
+    vbox:
+  File "game/screens.rpy", line 211, in execute
+    for i in items:
+  File "game/screens.rpy", line 212, in execute
+    textbutton i.caption action i.action
+NameError: Name 'TBD' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 30, in script
+    menu:
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 1504, in execute
+    choice = renpy.exports.menu(choices, self.set)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 870, in menu
+    rv = renpy.store.menu(items)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1056, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2620, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 401, in visit_all
+    callback(self)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 411, in per_interact
+    self.update()
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 592, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 207, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 207, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 210, in execute
+    vbox:
+  File "game/screens.rpy", line 211, in execute
+    for i in items:
+  File "game/screens.rpy", line 212, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ui.py", line 967, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1366, in __init__
+    self.set_text(text, scope, substitute)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1466, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\substitutions.py", line 242, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\substitutions.py", line 201, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'TBD' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.14.3135
+eaw_dates 1.0

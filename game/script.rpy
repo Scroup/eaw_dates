@@ -5,11 +5,13 @@ image gymdressingroom = "gymdress1.png"
 
 # CHARS ##
 image Psody serious = "Psody_serious.png"
+image Scroup_application = "scroup_application.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
 define psody = Character("Psody", color="#f76141")
 define you = Character("You", color="ffffff")
+define scroup = Character("Scroup", color="f0314c")
 
 # The game starts here.
 
@@ -31,14 +33,44 @@ label start:
           "Gym":
                 jump gym
           "Class":
-                jump classroom
-          "Dining Room[TBD]":
+                jump classroom1
+          "Dining Room":
                 jump dining_room
-label classroom:
+          "Club Room":
+                jump club1
+
+label classroom1:
                 show classroom_bg with fade
                 you "Oh, I'm first."
                 you "I guess, I'm stressing myself too much about this."
+
+                
                 return
+
+label club1:
+                show classroom_bg with fade
+                you "Hello?"
+                you "Is anyone there?"
+                scroup "Hey..."
+                "..."
+                show Scroup_application at right with moveinright
+                scroup "Oh, you're the new guy..."
+                scroup "You forgot to fill in your application..."
+                show Scroup_application at center with move
+
+                scroup "Here..."
+                you "Okie-dokie"
+                hide Scroup_application with dissolve
+                you "Well, that's one sad girl"
+                menu: 
+                     "Gym":
+                           jump gym
+                     "Class":
+                           jump classroom1
+                     "Dining Room":
+                           jump dining_room
+                     "Main Menu":
+                               return
 
 label gym:
     stop music fadeout 3.0
@@ -53,8 +85,10 @@ label gym:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
     you "Is anyone here?"
-    you "Good."
+    you "Nobody, apparently. Good"
     show Psody serious with dissolve
+    psody "Hello there."
+    you "Oh god!"
 
     # These display lines of dialogue.
 
