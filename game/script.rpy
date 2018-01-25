@@ -8,8 +8,8 @@ image Psody serious = "Psody_serious.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define psody = Character("Psody", color="#c8ffc8")
-define you = Character("You")
+define psody = Character("Psody", color="#f76141")
+define you = Character("You", color="ffffff")
 
 # The game starts here.
 
@@ -19,8 +19,6 @@ label start:
     you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
     you "It turned out that there were a lot of clubs!"
     you "I decided to join Equestria at War club, because I am really into ponies!"
-    you "And these guys, their mod, the whole town knows about it! It is absolutely great!"
-    you "I visited their presentation in town's square and the effort they put into their project is amazing!"
     you "Oh I'm so excited!"
     you "However, I haven't met any of the club members yet. I haven't even attended their class yet."
     you "Well..."
@@ -34,7 +32,7 @@ label start:
                 jump gym
           "Class":
                 jump classroom
-          "Dining Room":
+          "Dining Room[TBD]":
                 jump dining_room
 label classroom:
                 show classroom_bg with fade
