@@ -299,17 +299,7 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
 
-            textbutton _("Play alone") action Start()
-
-        textbutton _("History") action ShowMenu("history")
-
-        textbutton _("Save") action ShowMenu("save")
-        
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -319,7 +309,17 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+            textbutton _("History") action ShowMenu("history")
+
+            textbutton _("Save") action ShowMenu("save")
+        
+            textbutton _("Load") action ShowMenu("load")
+
+            textbutton _("Preferences") action ShowMenu("preferences")
+
+            textbutton _("About") action ShowMenu("about")
+
+        
 
         if renpy.variant("pc"):
 
@@ -356,12 +356,14 @@ screen main_menu():
     style_prefix "main_menu"
 
     add gui.main_menu_background
+    
     imagebutton auto "gui/button/button_menu_play_%s.png" xpos 50 ypos 700 focus_mask True action Start()
     imagebutton auto "gui/button/button_menu_load_%s.png" xpos 50 ypos 750 focus_mask True  action ShowMenu('load')
     imagebutton auto "gui/button/button_menu_options_%s.png" xpos 50 ypos 800 focus_mask True action ShowMenu('preferences')
     imagebutton auto "gui/button/button_menu_credits_%s.png" xpos 50 ypos 850 focus_mask True action ShowMenu("about")
     imagebutton auto "gui/button/button_menu_quit_%s.png" xpos 50 ypos 900 focus_mask True action Quit(confirm=False) 
     ## This empty frame darkens the main menu.
+    
     frame:
         pass
     
@@ -376,6 +378,9 @@ screen main_menu():
                 style "main_menu_title"
 
             text "[config.version]":
+                font "droid.ttf"
+                xpos -946 ypos 6
+                size 22
                 style "main_menu_version"
 
 
