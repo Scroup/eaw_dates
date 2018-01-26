@@ -2,24 +2,25 @@
 image school_entrance = "school_entrance.jpg"
 image classroom_bg = "class.jpg"
 image gymdressingroom = "gymdress1.png"
-
+image canteen = "school_canteen.jpg"
 # CHARS ##
 image Psody serious = "Psody_serious.png"
 image Scroup_application = "scroup_application.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define psody = Character("Psody", color="#f76141")
-define you = Character("You", color="ffffff")
-define scroup = Character("Scroup", color="f0314c")
+define psody = Character("Psody", color="#f76141",what_outlines=[ (2, "#e76e6e") ])
+define you = Character("You", color="ffffff",what_outlines=[ (2, "#9296a3") ])
+define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98") ])
 
 # The game starts here.
 
 label start:
-    play music "mainmenu.mp3" fadein 2.0
+    stop music
+    play music "snowfall_in_eqs.mp3" fadein 2.0
     scene school_entrance with fade
-    you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
-    you "It turned out that there were a lot of clubs!"
+    you "Two days ago I transferred to a new high school."
+    you "It turned out that there were a lot of clubs, that studied HoI4 modding!"
     you "I decided to join Equestria at War club, because I am really into ponies!"
     you "Oh I'm so excited!"
     you "However, I haven't met any of the club members yet. I haven't even attended their class yet."
@@ -111,4 +112,9 @@ label gym:
           return
     # This ends the game.
 
-    return
+label dining_room:
+                show canteen with fade
+                you "It's not time to eat really."
+                you "But I could wait here until the classes start."
+                return
+return

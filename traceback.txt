@@ -1,86 +1,61 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
+While processing the outlines property of anonymous style:
   File "game/script.rpy", line 21, in script
-    you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-Exception: Could not find font u'Sitka.ttf'.
+    you "Two days ago I transferred to a new high school."
+Exception: Color string u'#FF00FF' must be 3, 4, 6, or 8 hex digits long.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\bootstrap.py", line 306, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\main.py", line 520, in main
-    run(restart)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\main.py", line 149, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\execution.py", line 835, in run_context
-    context.run()
   File "game/script.rpy", line 21, in script
-    you "Two days ago, I've been transferred to a Hearts of Iron IV modder high school."
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 609, in execute
-    statement_name("say")
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 43, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1408, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2186, in do_with
-    clear=clear)
+    you "Two days ago I transferred to a new high school."
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 643, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1175, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\character.py", line 1013, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\character.py", line 817, in do_display
+    **display_args)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\character.py", line 566, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2620, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 3022, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2034, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 475, in renpy.display.render.render_screen
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\transition.py", line 361, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 639, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 711, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\layout.py", line 1110, in render
-    st, at)
-  File "render.pyx", line 143, in renpy.display.render.render
-  File "render.pyx", line 231, in renpy.display.render.render
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1807, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 590, in __init__
-    glyphs = ts.glyphs(s, self)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 238, in glyphs
-    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\font.py", line 650, in get_font
-    face = load_face(fn)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\font.py", line 591, in load_face
-    raise Exception("Could not find font {0!r}.".format(orig_fn))
-Exception: Could not find font u'Sitka.ttf'.
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\screen.py", line 405, in visit_all
+    self.child.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 511, in visit_all
+    d.visit_all(callback)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 513, in visit_all
+    callback(self)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2925, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\text\text.py", line 1497, in per_interact
+    if self.style.slow_abortable:
+  File "gen/styleclass.pxi", line 733, in renpy.styledata.styleclass.Style.slow_abortable.__get__
+  File "style.pyx", line 486, in renpy.style.StyleCore._get
+  File "style.pyx", line 702, in renpy.style.build_style
+  File "style.pyx", line 699, in renpy.style.build_style
+  File "gen/style_functions.pyx", line 230, in style_functions.outlines_property
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\styledata\styleutil.py", line 52, in expand_outlines
+    rv.append((i[0], renpy.easy.color(i[1]), 0, 0))
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\color.py", line 156, in __new__
+    raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
+Exception: Color string u'#FF00FF' must be 3, 4, 6, or 8 hex digits long.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3135
