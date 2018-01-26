@@ -295,20 +295,18 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.9
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("Play alone") action Start()
 
-        else:
+        textbutton _("History") action ShowMenu("history")
 
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
-
+        textbutton _("Save") action ShowMenu("save")
+        
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
@@ -326,10 +324,9 @@ screen navigation():
         if renpy.variant("pc"):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Help") xpos 1750 ypos -850  action ShowMenu("help")
 
-            ## The quit button is banned on iOS and unnecessary on Android.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+
 
 
 style navigation_button is gui_button
@@ -353,15 +350,21 @@ screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
+    
+  
 
     style_prefix "main_menu"
 
     add gui.main_menu_background
-
+    imagebutton auto "gui/button/button_menu_play_%s.png" xpos 50 ypos 700 focus_mask True action Start()
+    imagebutton auto "gui/button/button_menu_load_%s.png" xpos 50 ypos 750 focus_mask True  action ShowMenu('load')
+    imagebutton auto "gui/button/button_menu_options_%s.png" xpos 50 ypos 800 focus_mask True action ShowMenu('preferences')
+    imagebutton auto "gui/button/button_menu_credits_%s.png" xpos 50 ypos 850 focus_mask True action ShowMenu("about")
+    imagebutton auto "gui/button/button_menu_quit_%s.png" xpos 50 ypos 900 focus_mask True action Quit(confirm=False) 
     ## This empty frame darkens the main menu.
     frame:
         pass
-
+    
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
@@ -418,6 +421,13 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
 
+
+
+    imagebutton auto "gui/button/button_menu_play_%s.png" xpos 50 ypos 700 focus_mask True action Start()
+    imagebutton auto "gui/button/button_menu_load_%s.png" xpos 50 ypos 750 focus_mask True  action ShowMenu('load')
+    imagebutton auto "gui/button/button_menu_options_%s.png" xpos 50 ypos 800 focus_mask True action ShowMenu('preferences')
+    imagebutton auto "gui/button/button_menu_credits_%s.png" xpos 50 ypos 850 focus_mask True action ShowMenu("about")
+    imagebutton auto "gui/button/button_menu_quit_%s.png" xpos 50 ypos 900 focus_mask True action Quit(confirm=False)
     if main_menu:
         add gui.main_menu_background
     else:
