@@ -32,20 +32,24 @@ label start:
     $ player_name = renpy.input("What's my name?")
     if player_name  == " ":
         $ player_name="Nerd"
+    if player_name  == "":
+        $ player_name="Memelord"
     $ player_name = player_name.strip()
 # TEST
     if player_name  == "Memelord":
         narrator "[player_name]? Seriously? Could you be more original?"
-    if player_name  == "Cyrus":
+    elif player_name  == "Cyrus":
         narrator "[player_name]. Oh, [player_name], I was waiting for you, my croatian boy."
-    if player_name  == "Scroup":
+    elif player_name  == "Scroup":
         narrator "Scroupy, ayy lmao, do you want there to be two of you?"
-    if player_name  == "Flake":
-        narrator "Flock."
+    elif player_name  == "Flake":
+        narrator "Flock, right?"
+    elif player_name  == "Yard":
+        narrator "Flock, right?"
     else:
         narrator "[player_name]? What kind of name is that?"
     you "......!"
-    narrator "My name? That doesn't matter."
+    narrator "Who am I? That doesn't matter."
     narrator "Time's up! Let me just start this meme."
     hide text with dissolve
     with Pause(1)
@@ -53,7 +57,7 @@ label start:
 
     scene bedroom_day with fade
     play music "At_Long_Last.mp3"
-    you "What kind of nightmare is that?"
+    you "What kind of nightmare was that?"
     you "Well."
     you "It doesn't matter, I should go."
 
