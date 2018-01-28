@@ -3,6 +3,7 @@ image school_entrance = "school_entrance.jpg"
 image classroom_bg = "class.jpg"
 image gymdressingroom = "gymdress1.png"
 image canteen = "school_canteen.jpg"
+image splash = "Cyrus_quote.png"
 # CHARS ##
 image Psody serious = "Psody_serious.png"
 image Scroup_application = "scroup_application.png"
@@ -16,6 +17,30 @@ define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98"
 # The game starts here.
 
 label start:
+    stop music
+    play music "thrilling_set.wav" fadein 1.0
+    scene bedroom_night with fade
+    narrator "You lived a very boring and poor life."
+    narrator "Ponies and anime were the only things that mattered to you. And also that game, called Hearts of Iron 4."
+    narrator "Back then these things actually mattered to you, but looking at them now... Nuisance, Isn't it?"
+    narrator "But now..."
+    narrator "I can make them {color=#B13415}true{/color}."
+    you "......."
+    narrator "No, don't thank me for that."
+    narrator "Anyway, what's your name?"
+# Input for name
+    $ player_name = renpy.input("What's my name?")
+    if player_name  == "":
+        $ player_name="Nerd"
+    $ player_name = player_name.strip()
+# TEST
+    narrator "So, your name is [player_name]? Neat, I guess."
+    you "......!"
+    narrator "What's my name? That's doesn't matter."
+    narrator "Time's up! Let me just start this meme."
+    hide text with dissolve
+    with Pause(1)
+
     stop music
     play music "snowfall_in_eqs.mp3" fadein 2.0
     scene school_entrance with fade
@@ -94,7 +119,6 @@ label gym:
     # These display lines of dialogue.
 
     psody "Oh. Haven't seen you before. So, you're that rookie everyone talks about? Name's Psody, nice to meet you."
-
     menu: 
           "H-hey":
                 jump psodyishappy
@@ -104,14 +128,41 @@ label gym:
           psody "You're cute, want to meet me tomorrow?"
           psody "I can get you comfortable in the club."
           you "S-sure!"
-          return
+          jump clubalt1
     label psodyisnothappy:
           psody "What is this tone of yours?"
           you "REEEEEE"
           psody "You take that back!"
+          scene black with dissolve
+          hide Psody serious
+          narrator "He hits you in the head. You passed out on the cold, wet floor."
+          hide text with dissolve
+          with Pause(1)
+          scene gymdressingroom with dissolve
+          you "Ough that hurts"
+          you "Why did I even tried to mess with this swoll, nice guy?"
+          you "Welp, that's not the first time for me to make poor decision."
+          you "Oh, he's gone now. I'll beter keep going too."
+
           return
     # This ends the game.
-
+label clubalt1:
+    show classroom_bg with fade
+    narrator "blank"
+    show Psody serious at center
+    psody "There we go. Scroup! We have a fresh meat!"
+    you "..."
+    psody "What? I'm just pulling your leg, sweetie."
+    scroup "Wha? Yes, I'm comming..."
+    show Psody serious at left with move
+    show Scroup_application at right with moveinright
+    scroup "Oh"
+    scroup "Psody, what is this?"
+    psody "A new guy."
+    you "Is something wrong?"
+    scroup "REEE GET OUT NORMIE"
+    narrator "Oh boy that's it"
+    return
 label dining_room:
                 show canteen with fade
                 you "It's not time to eat really."
