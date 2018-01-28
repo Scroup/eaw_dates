@@ -3,7 +3,6 @@ image school_entrance = "school_entrance.jpg"
 image classroom_bg = "class.jpg"
 image gymdressingroom = "gymdress1.png"
 image canteen = "school_canteen.jpg"
-image splash = "Cyrus_quote.png"
 # CHARS ##
 image Psody serious = "Psody_serious.png"
 image Scroup_application = "scroup_application.png"
@@ -15,8 +14,9 @@ define you = Character("You", color="ffffff",what_outlines=[ (2, "#9296a3") ])
 define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98") ])
 
 # The game starts here.
-
 label start:
+    stop music
+    $ renpy.movie_cutscene("images/splash.webm")
     stop music
     play music "thrilling_set.wav" fadein 1.0
     scene bedroom_night with fade
