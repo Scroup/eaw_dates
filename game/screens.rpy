@@ -379,8 +379,8 @@ screen main_menu():
 
             text "[config.version]":
                 font "droid.ttf"
-                xpos -946 ypos 6
-                size 22
+                xpos -1164 ypos 2
+                size 17
                 style "main_menu_version"
 
 
@@ -405,6 +405,7 @@ style main_menu_vbox:
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
+    xpos 470 ypos 55
 
 style main_menu_title:
     properties gui.text_properties("title")
