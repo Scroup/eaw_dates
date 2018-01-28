@@ -1,20 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 27, in script
-    you "So, my name is %(player_name)? Neat, I guess."
-ValueError: unsupported format character '?' (0x3f) at index 29
+  File "game/script.rpy", line 37, in script
+    if player_name  = "Memelord":
+SyntaxError: invalid syntax (game/script.rpy, line 37)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 27, in script
-    you "So, my name is %(player_name)? Neat, I guess."
-  File "C:\Renpy\renpy-6.99.14-sdk\renpy\ast.py", line 643, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "C:\Renpy\renpy-6.99.14-sdk\renpy\exports.py", line 1164, in say
-    what = what % tag_quoting_dict
-ValueError: unsupported format character '?' (0x3f) at index 29
+  File "game/script.rpy", line 37, in script
+    if player_name  = "Memelord":
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 1702, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\python.py", line 1833, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\python.py", line 630, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/script.rpy, line 37)
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3135

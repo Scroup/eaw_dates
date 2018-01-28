@@ -30,16 +30,32 @@ label start:
     narrator "Anyway, what's your name?"
 # Input for name
     $ player_name = renpy.input("What's my name?")
-    if player_name  == "":
+    if player_name  == " ":
         $ player_name="Nerd"
     $ player_name = player_name.strip()
 # TEST
-    narrator "[player_name]? What kind of name is that?"
+    if player_name  == "Memelord":
+        narrator "[player_name]? Seriously? Could you be more original?"
+    if player_name  == "Cyrus":
+        narrator "[player_name]. Oh, [player_name], I was waiting for you, my croatian boy."
+    if player_name  == "Scroup","Scroupy":
+        narrator "Scroupy, ayy lmao, do you want there to be two of you?"
+    if player_name  == "Flake":
+        narrator "Flock."
+    else:
+        narrator "[player_name]? What kind of name is that?"
     you "......!"
     narrator "My name? That doesn't matter."
     narrator "Time's up! Let me just start this meme."
     hide text with dissolve
     with Pause(1)
+    stop music
+
+    scene bedroom_day with fade
+    play music "At_Long_Last.mp3"
+    you "What kind of nightmare is that?"
+    you "Well."
+    you "It doesn't matter, I should go."
 
     stop music
     play music "snowfall_in_eqs.mp3" fadein 2.0
@@ -53,7 +69,7 @@ label start:
     you "It's still morning."
     you "And the classes haven't started yet."
     you "I need to make a good impression."
-    you "Where should I go first?"
+    you "Where should I go first today?"
 
     menu: 
           "Gym":
