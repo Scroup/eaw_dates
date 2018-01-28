@@ -12,6 +12,7 @@ image Scroup_application = "scroup_application.png"
 define psody = Character("Psody", color="#f76141",what_outlines=[ (2, "#e76e6e") ])
 define you = Character("[player_name]", color="ffffff",what_outlines=[ (2, "#9296a3") ])
 define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98") ])
+define narrator = Character(color="898989",what_outlines=[ (2, "#383e45") ])
 
 # The game starts here.
 label start:
@@ -33,7 +34,7 @@ label start:
     if player_name  == " ":
         $ player_name="Nerd"
     if player_name  == "":
-        $ player_name="Memelord"
+        $ player_name="Memelord{image=broken_heart.png}"
     $ player_name = player_name.strip()
 # TEST
     if player_name  == "Memelord":
@@ -45,7 +46,21 @@ label start:
     elif player_name  == "Flake":
         narrator "Flock, right?"
     elif player_name  == "Yard":
-        narrator "Flock, right?"
+        narrator "Yard? What happened to you?"
+    elif player_name  == "Psody":
+        narrator "But Psody, there's already one Psody in this game."
+    elif player_name  == "Pseria":
+        narrator "But Psody, there's already one Psody in this game."
+    elif player_name  == "Psodovsky":
+        narrator "But Psody, there's already one Psody in this game."
+    elif player_name  == "Sinister":
+        narrator "Sorry, but there's no Scroup romance root in this game.{image=broken_heart.png}"
+    elif player_name  == "Sinnie":
+        narrator "Sorry, but there's no Scroup romance root in this game.{image=broken_heart.png}"
+    elif player_name  == "Cwop":
+        narrator "Sorry, but there's no Scroup romance root in this game {image=broken_heart.png}"
+    elif player_name  == "Mageytash":
+        narrator "Oh, no, you cuck is here too!"
     else:
         narrator "[player_name]? What kind of name is that?"
     you "......!"
@@ -67,7 +82,7 @@ label start:
     you "Two days ago I transferred to a new high school."
     you "It turned out that there were a lot of clubs, that studied HoI4 modding!"
     you "I decided to join Equestria at War club, because I am really into ponies!"
-    you "Oh I'm so excited!"
+    you "Oh I'm so excited!{image=sparkles.png}"
     you "However, I haven't met any of the club members yet. I haven't even attended their class yet."
     you "Well..."
     you "It's still morning."
