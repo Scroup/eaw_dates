@@ -324,7 +324,7 @@ screen navigation():
         if renpy.variant("pc"):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") xpos 1750 ypos -850  action ShowMenu("help")
+            textbutton _("Help") xpos 1800 ypos -925  action ShowMenu("help")
 
 
 

@@ -38,7 +38,7 @@ label start:
         narrator "[player_name]? Seriously? Could you be more original?"
     if player_name  == "Cyrus":
         narrator "[player_name]. Oh, [player_name], I was waiting for you, my croatian boy."
-    if player_name  == "Scroup","Scroupy":
+    if player_name  == "Scroup":
         narrator "Scroupy, ayy lmao, do you want there to be two of you?"
     if player_name  == "Flake":
         narrator "Flock."
