@@ -10,7 +10,7 @@ image Scroup_application = "scroup_application.png"
 # name of the character.
 
 define psody = Character("Psody", color="#f76141",what_outlines=[ (2, "#e76e6e") ])
-define you = Character("You", color="ffffff",what_outlines=[ (2, "#9296a3") ])
+define you = Character("[player_name]", color="ffffff",what_outlines=[ (2, "#9296a3") ])
 define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98") ])
 
 # The game starts here.
@@ -22,10 +22,10 @@ label start:
     scene bedroom_night with fade
     narrator "You lived a very boring and poor life."
     narrator "Ponies and anime were the only things that mattered to you. And also that game, called Hearts of Iron 4."
-    narrator "Back then these things actually mattered to you, but looking at them now... Nuisance, Isn't it?"
-    narrator "But now..."
-    narrator "I can make them {color=#B13415}true{/color}."
-    you "......."
+    narrator "Looking at your life now, is there substance to it? Thinking about all this now... Nuisance, Isn't it?"
+    narrator "But..."
+    narrator "Here your dreams will come {color=#B13415}true{/color}."
+    "......."
     narrator "No, don't thank me for that."
     narrator "Anyway, what's your name?"
 # Input for name
@@ -34,9 +34,9 @@ label start:
         $ player_name="Nerd"
     $ player_name = player_name.strip()
 # TEST
-    narrator "So, your name is [player_name]? Neat, I guess."
+    narrator "[player_name]? What kind of name is that?"
     you "......!"
-    narrator "What's my name? That's doesn't matter."
+    narrator "My name? That doesn't matter."
     narrator "Time's up! Let me just start this meme."
     hide text with dissolve
     with Pause(1)
@@ -142,7 +142,7 @@ label gym:
           you "Ough that hurts"
           you "Why did I even tried to mess with this swoll, nice guy?"
           you "Welp, that's not the first time for me to make poor decision."
-          you "Oh, he's gone now. I'll beter keep going too."
+          you "Oh, he's gone now. I'll better keep going too."
 
           return
     # This ends the game.
