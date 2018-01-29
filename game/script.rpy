@@ -3,6 +3,8 @@ image school_entrance = "school_entrance.jpg"
 image classroom_bg = "class.jpg"
 image gymdressingroom = "gymdress1.png"
 image canteen = "school_canteen.jpg"
+image parking lot = "parking_lot.jpg"
+image mem = "tumblr.gif"
 # CHARS ##
 image Psody serious = "Psody_serious.png"
 image scroup_regular = "scroup_regular.png"
@@ -27,6 +29,7 @@ label start:
     narrator "Ponies and anime were the only things that mattered to you. And also that game, called Hearts of Iron 4."
     narrator "Looking at your life now, is there substance to it? Thinking about all this now... Nuisance, Isn't it?"
     narrator "But..."
+    show mem
     narrator "Here your dreams will come {color=#B13415}true{/color}."
     "......."
     narrator "No, don't thank me for that."
@@ -95,20 +98,24 @@ label start:
     menu: 
           "Gym":
                 jump gym
-          "Class":
-                jump classroom1
+          "Parking Lot":
+                jump parking_lot
           "Dining Room":
                 jump dining_room
           "Club Room":
                 jump club1
 
-label classroom1:
-                show classroom_bg with fade
-                you "Oh, I'm first."
-                you "I guess, I'm stressing myself too much about this."
+label parking_lot:
+                show parking lot with fade
+                you "Well, there's nothing to look at here."
+                menu:
+                    "Gym":
+                         jump gym
+                    "Dining Room":
+                         jump dining_room
+                    "Club Room":
+                         jump club1
 
-                
-                return
 
 label club1:
                 show classroom_bg with fade
@@ -193,16 +200,17 @@ label gym:
     # This ends the game.
 label clubalt1:
     show classroom_bg with fade
+    hide Psody serious
     narrator "blank"
     show Psody serious at center
     psody "There we go. Scroup! We have a fresh meat!"
     you "..."
     psody "What? I'm just pulling your leg, sweetie."
     scroup "Wha? Yes, I'm comming..."
-    show Psody serious at left with move
+    show Psody serious at left
     show scroup_regular at right with moveinright
     scroup "Oh"
-    scroup "Psody, what is this?"
+    scroup "Psody, who is that?"
     psody "A new guy."
     you "Is something wrong?"
     scroup "REEE GET OUT NORMIE"
