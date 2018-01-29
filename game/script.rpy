@@ -202,12 +202,11 @@ label clubalt1:
     show classroom_bg with fade
     hide Psody serious
     narrator "blank"
-    show Psody serious at center
+    show Psody serious at left with fade
     psody "There we go. Scroup! We have a fresh meat!"
     you "..."
     psody "What? I'm just pulling your leg, sweetie."
     scroup "Wha? Yes, I'm comming..."
-    show Psody serious at left
     show scroup_regular at right with moveinright
     scroup "Oh"
     scroup "Psody, who is that?"

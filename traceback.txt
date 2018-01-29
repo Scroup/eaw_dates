@@ -1,33 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 408, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 418, in <module>
-    renpy.take_screenshot((config.thumbnail_width, config.thumbnail_height))
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+  File "game/script.rpy", line 147, in script
+    jump classroom1
+ScriptError: could not find label 'classroom1'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 408, in script
-    python hide:
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 848, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\python.py", line 1804, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 418, in <module>
-    renpy.take_screenshot((config.thumbnail_width, config.thumbnail_height))
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\exports.py", line 1525, in take_screenshot
-    renpy.game.interface.take_screenshot(scale, background=background)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\core.py", line 2081, in take_screenshot
-    surf = renpy.display.scale.smoothscale(surf, scale)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\scale.py", line 93, in real_smoothscale
-    dest = pgrender.surface_unscaled(size, src)
-  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\display\pgrender.py", line 116, in surface
-    surf = Surface((width + 4, height + 4), 0, sample)
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+  File "game/script.rpy", line 147, in script
+    jump classroom1
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\ast.py", line 1573, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Scroup\Documents\renpy-6.99.14-sdk\renpy\script.py", line 871, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'classroom1'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3135
- 
+Equestria at War: Dev Dates ALPHA
