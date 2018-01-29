@@ -1,38 +1,39 @@
-Mon Jan 29 02:34:17 2018
+Mon Jan 29 17:44:47 2018
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3135
  
 
 Bootstrap to the start of init.init took 0.11s
 Early init took 0.01s
-Loader init took 0.05s
+Loader init took 0.06s
 Loading error handling took 0.03s
-Loading script took 0.14s
-Loading save slot metadata. took 0.02s
+Loading script took 0.27s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.13s
-Loading analysis data took 0.10s
+Running init code took 0.12s
+Loading analysis data took 0.09s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Scroup\\AppData\\Roaming/RenPy/backups\\eaw_dates':
 Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.03s
 DPI scale factor: 1.000000
-Creating interface object took 0.05s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.01s
-Load screen analysis took 0.45s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.08s
 Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.11s
+Save bytecode. took 0.07s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.04s
+Interface start took 0.03s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -402,11 +403,18 @@ Texture testing:
 - 1024px textures work.
 - 2048px textures work.
 controller: 'c0110356000000000000504944564944' None 0
-Total time until interface ready: 2.21399998665s
+Total time until interface ready: 1.91799998283s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017667 seconds.
 - Frame drawn at 0.018667 seconds.
-- Frame drawn at 0.029667 seconds.
-- Frame drawn at 0.047667 seconds.
-- 0.047667 seconds to render 5 frames.
+- Frame drawn at 0.019667 seconds.
+- Frame drawn at 0.030667 seconds.
+- Frame drawn at 0.058667 seconds.
+- 0.058667 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.19s
+Build styles took 0.01s
+Load screen analysis took 0.54s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.01s

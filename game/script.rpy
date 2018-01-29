@@ -5,7 +5,9 @@ image gymdressingroom = "gymdress1.png"
 image canteen = "school_canteen.jpg"
 # CHARS ##
 image Psody serious = "Psody_serious.png"
-image Scroup_application = "scroup_application.png"
+image scroup_regular = "scroup_regular.png"
+image scroup_application = "scroup_application.png"
+image scroup_application_up = "scroup_application2.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -114,14 +116,22 @@ label club1:
                 you "Is anyone there?"
                 scroup "Hey..."
                 "..."
-                show Scroup_application at right with moveinright
+                show scroup_regular at right with moveinright
                 scroup "Oh, you're the new guy..."
                 scroup "You forgot to fill in your application..."
-                show Scroup_application at center with move
+                you "Oh, right."
+                hide scroup_regular with moveoutright
+                scroup "Where was it?"
+                scroup "Right."
+                show scroup_application at right with moveinright
+                scroup "Here it is."
+                show scroup_application at center with move
+                hide scroup_application
+                show scroup_application_up
 
-                scroup "Here..."
+                scroup "Take it..."
                 you "Okie-dokie"
-                hide Scroup_application with dissolve
+                hide scroup_application_up with dissolve
                 you "Well, that's one sad girl"
                 menu: 
                      "Gym":
@@ -190,7 +200,7 @@ label clubalt1:
     psody "What? I'm just pulling your leg, sweetie."
     scroup "Wha? Yes, I'm comming..."
     show Psody serious at left with move
-    show Scroup_application at right with moveinright
+    show scroup_regular at right with moveinright
     scroup "Oh"
     scroup "Psody, what is this?"
     psody "A new guy."
