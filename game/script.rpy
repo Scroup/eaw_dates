@@ -10,6 +10,8 @@ image Psody serious = "Psody_serious.png"
 image scroup_regular = "scroup_regular.png"
 image scroup_application = "scroup_application.png"
 image scroup_application_up = "scroup_application2.png"
+image yard_regular = "yard_regular.png"
+image cyrus_pissed = "cyrus_dev.png"
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -17,7 +19,8 @@ define psody = Character("Psody", color="#f76141",what_outlines=[ (2, "#e76e6e")
 define you = Character("[player_name]", color="ffffff",what_outlines=[ (2, "#9296a3") ])
 define scroup = Character("Scroup", color="f0314c",what_outlines=[ (2, "#e76e98") ])
 define narrator = Character(color="898989",what_outlines=[ (2, "#383e45") ])
-
+define yard = Character("Yard", color="EF064D",what_outlines=[ (2, "#710F1E") ])
+define cyrus = Character("Cyrus", color="E5D390",what_outlines=[ (2, "#6C5F3A") ])
 # The game starts here.
 label start:
     stop music
@@ -140,6 +143,7 @@ label club1:
                 you "Okie-dokie"
                 hide scroup_application_up with dissolve
                 you "Well, that's one sad girl"
+                $ application_taken = 1
                 menu: 
                      "Gym":
                            jump gym
@@ -219,5 +223,23 @@ label dining_room:
                 show canteen with fade
                 you "It's not time to eat really."
                 you "But I could wait here until the classes start."
+                jump dining_room_meeting
                 return
+label dining_room_meeting:
+    show canteen
+    narrator "All of a sudden you heard some voices"
+    narrator "Like, someone arguing or so"
+    narrator "..."
+    narrator "Voices getting louder"
+    you "Am I getting crazy??"
+    narrator "Boy and girl entered canteen. They looking kinda pissed. You decided to watch."
+    stop music
+    play music "time_to_know.mp3" fadein 1.0
+    show yard_regular at right with dissolve
+    show cyrus_dev at left with dissolve
+    cyrus "As I was saying..."
+    yard "Yeah? What were you saying? I bet ICC would be intrested in your speeches, croatboy!"
+    cyrus "Oh please, are you drunk again?"
+    you "..."
+    narrator "..."
 return
